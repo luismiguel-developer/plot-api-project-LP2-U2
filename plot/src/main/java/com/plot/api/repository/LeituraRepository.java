@@ -28,7 +28,7 @@ public class LeituraRepository {
     public List<Leitura> buscarTodos() {
         return new ArrayList<>(bancoDeDados.values());
     }
-
+    
     public void deletar(Long id) {
         bancoDeDados.remove(id);
     }
