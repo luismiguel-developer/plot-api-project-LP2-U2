@@ -15,7 +15,7 @@ API desenvolvida para transformar o hábito de leitura em uma experiência gamif
 * **Arquitetura Limpa:** Validações de entrada diretamente no Controller para garantir a integridade da persistência.
 
 ## 3. Como Executar
-1. Clone o repositório: `git clone [link-do-seu-repositorio]`
+1. Clone o repositório: `git clone https://github.com/luismiguel-developer/plot-api-project-LP2-U2`
 2. Abra a pasta do projeto no seu terminal.
 3. Execute a aplicação via Maven: `./mvnw spring-boot:run`
 4. O servidor iniciará localmente na porta `8080`.
