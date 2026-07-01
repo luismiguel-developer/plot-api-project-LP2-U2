@@ -4,7 +4,7 @@ import com.plot.api.service.LeituraService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/leituras")
@@ -15,7 +15,7 @@ public class LeituraController {
         this.service = service;
     }
     @PostMapping
-    public ResponseEntity<Leitura> criar(@RequestBody Leitura leitura) {
+    public ResponseEntity<Leitura> criar(@Valid @RequestBody Leitura leitura) {
         Leitura novaLeitura = service.iniciarNovaLeitura(leitura);
         return ResponseEntity.ok(novaLeitura);
     }

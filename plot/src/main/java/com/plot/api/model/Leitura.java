@@ -1,18 +1,26 @@
 package com.plot.api.model;
 import java.time.LocalDate;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class Leitura {
     private Long id;
+    @NotBlank(message = "O título do livro não pode estar em branco")
     private String tituloLivro;
-    private int totalPaginas;
+    @NotNull(message = "O total de páginas é obrigatório")
+    @Min(value = 1, message = "O livro deve ter pelo menos 1 página")
+    private Integer totalPaginas;
     private int paginaAtual;
-    private int metaDiariaPaginas;
+    @NotNull(message = "A meta diária é obrigatória")
+    @Min(value = 1, message = "A meta diária deve ser de pelo menos 1 página")
+    private Integer metaDiariaPaginas;
     private int streakAtual;
     private int maiorStreak;
     private int totalXp;
     private LocalDate dataUltimoCheckIn;
 
-    public Leitura(Long id, String tituloLivro, int totalPaginas, int metaDiariaPaginas) {
+    public Leitura(Long id, String tituloLivro, Integer totalPaginas, Integer metaDiariaPaginas) {
         this.id = id;
         this.tituloLivro = tituloLivro;
         this.totalPaginas = totalPaginas;
